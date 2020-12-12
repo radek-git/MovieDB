@@ -1,6 +1,6 @@
 package com;
 
-public class Stuff {
+public abstract class Stuff {
 
     String firstName;
     String lastName;
@@ -11,6 +11,9 @@ public class Stuff {
         this.lastName = lastName;
         this.payment = payment;
     }
+
+
+
 
     public String getFirstName() {
         return firstName;
@@ -32,9 +35,7 @@ public class Stuff {
         return payment;
     }
 
-    public void setPayment(double payment) {
-        this.payment = payment;
-    }
+    public abstract void setPayment(double payment);
 
     @Override
     public String toString() {

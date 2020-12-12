@@ -7,20 +7,17 @@ import java.util.List;
 public class Movie {
 
     String title;
-    Director director;
+//    Director director;
     LocalDate premierDate;
-    List<Actor> actors = new ArrayList<>();
+    List<Stuff> stuffList = new ArrayList<>();
     MovieType movieType;
 
-    public Movie(String title, Director director, LocalDate premierDate,
-                 List<Actor> actors, MovieType movieType) {
+    public Movie(String title, LocalDate premierDate, List<Stuff> stuffList, MovieType movieType) {
         this.title = title;
-        this.director = director;
         this.premierDate = premierDate;
-        this.actors = actors;
+        this.stuffList = stuffList;
         this.movieType = movieType;
     }
-
 
     public String getTitle() {
         return title;
@@ -28,14 +25,6 @@ public class Movie {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
     }
 
     public LocalDate getPremierDate() {
@@ -46,12 +35,12 @@ public class Movie {
         this.premierDate = premierDate;
     }
 
-    public List<Actor> getActors() {
-        return actors;
+    public List<Stuff> getStuffList() {
+        return stuffList;
     }
 
-    public void setActors(List<Actor> actors) {
-        this.actors = actors;
+    public void setStuffList(List<Stuff> stuffList) {
+        this.stuffList = stuffList;
     }
 
     public MovieType getMovieType() {
@@ -67,9 +56,8 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "title='" + title + '\'' +
-                ", director=" + director +
                 ", premierDate=" + premierDate +
-                ", actors=" + actors +
+                ", stuffList=" + stuffList +
                 ", movieType=" + movieType +
                 '}';
     }
